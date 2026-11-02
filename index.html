@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>mhlphoto — Meng / 建筑师・摄影师</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&family=Noto+Sans+SC:wght@300;400;500&display=swap');
+:root{--ink:#25232a;--muted:#77717a;--pink:#e9a3b5;--paper:#fffafd}
+*{box-sizing:border-box} html{scroll-behavior:smooth} body{margin:0;background:linear-gradient(135deg,#fff,#fff4f7 55%,#f9e9ef);color:var(--ink);font-family:Inter,"Noto Sans SC",sans-serif;font-weight:300}
+nav{position:fixed;z-index:10;top:0;left:0;right:0;height:72px;display:flex;align-items:center;justify-content:space-between;padding:0 5vw;background:linear-gradient(#fffafcf2,transparent);backdrop-filter:blur(8px)}
+.logo{font-size:20px;letter-spacing:.08em}.links{display:flex;gap:34px;font-size:13px}.links a{color:inherit;text-decoration:none;padding:8px 0}.links a.active{border-bottom:1px solid var(--pink)}
+.page{display:none;min-height:100vh;padding:110px 7vw 70px}.page.active{display:block}
+.hero{height:100vh;padding:0;display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden;background:linear-gradient(160deg,#f7dbe4,#f5b8c7 35%,#c7c4dc 70%,#747a98)}
+.hero:before{content:"";position:absolute;inset:0;background:radial-gradient(ellipse at 70% 35%,#fff5 0 5%,transparent 32%),linear-gradient(180deg,transparent 50%,#34354b77)}
+.hero:after{content:"";position:absolute;width:130%;height:50%;bottom:-18%;left:-15%;border-radius:50% 50% 0 0;background:linear-gradient(160deg,#3e4159,#151a2d);opacity:.8}
+.hero-content{position:relative;z-index:2;text-align:center;color:white}.hero h1{font-size:clamp(60px,10vw,120px);font-weight:300;letter-spacing:.12em;margin:0}.hero p{font-size:19px;letter-spacing:.22em}.hero small{display:block;margin-top:35px;opacity:.8;letter-spacing:.15em}
+.head{display:flex;justify-content:space-between;align-items:end;margin-bottom:45px}.head h2{font-size:42px;font-weight:300;margin:0}.head p{color:var(--muted);max-width:380px;line-height:1.8}
+.grid{display:grid;grid-template-columns:repeat(12,1fr);gap:18px}.project{background:#fff8;border:1px solid #fff;border-radius:2px;overflow:hidden}.project .pic{height:230px}.project:nth-child(2){margin-top:65px}.project:nth-child(3){margin-top:-25px}.project:nth-child(4){margin-top:40px}
+.project:nth-child(1){grid-column:span 6}.project:nth-child(2){grid-column:span 6}.project:nth-child(3){grid-column:span 5}.project:nth-child(4){grid-column:span 7}
+.pic{position:relative;overflow:hidden;background:linear-gradient(135deg,#dba5b8,#6f789a)}.pic:after{content:"";position:absolute;inset:0;background:linear-gradient(135deg,transparent,#fff2)}
+.p1{background:linear-gradient(135deg,#18223c,#df8d9e 45%,#f7d7cc)}.p2{background:linear-gradient(145deg,#8299a9,#d7c8b8 48%,#6d7785)}.p3{background:linear-gradient(135deg,#242530,#ead9ce 45%,#9b8794)}.p4{background:linear-gradient(135deg,#d3a0a9,#e8e0d9 48%,#8aa0a0)}
+.project .copy{padding:20px 22px 24px}.project h3{margin:0 0 8px;font-size:20px;font-weight:400}.project p{margin:0;color:var(--muted);line-height:1.7;font-size:13px}
+.about{display:grid;grid-template-columns:1fr 1.35fr;gap:8vw;align-items:center;max-width:1100px;margin:auto}.portrait{height:600px;background:radial-gradient(circle at 52% 28%,#f4c4c6 0 11%,transparent 11.5%),linear-gradient(135deg,#2d3040 0 38%,#e6b2b7 38% 55%,#758096 55%);position:relative}.portrait:before{content:"Meng";position:absolute;bottom:30px;left:30px;color:white;font-size:38px;font-style:italic}.about h2,.contact h2{font-size:48px;font-weight:300;margin:0 0 30px}.about p{font-size:16px;line-height:2.1;color:#625d65}.rule{width:42px;border-top:1px solid var(--pink);margin:30px 0}
+.contact{display:grid;grid-template-columns:1.5fr .7fr;gap:8vw;max-width:1050px;margin:auto}.form{display:grid;gap:15px}.form input,.form textarea{font:inherit;border:1px solid #eadbe0;background:#fff9;padding:16px 15px;outline:none}.form textarea{min-height:180px;resize:vertical}.btn{border:0;background:#e9a3b5;color:white;padding:15px 24px;width:150px}.social{border-left:1px solid #e6d4da;padding-left:40px}.social h3{font-weight:400}.social p{color:var(--muted);line-height:2}
+@media(max-width:760px){nav{height:62px;padding:0 5vw}.links{gap:13px;font-size:11px}.page{padding:92px 5vw 50px}.head{display:block}.head h2,.about h2,.contact h2{font-size:36px}.grid{display:block}.project,.project:nth-child(2),.project:nth-child(3),.project:nth-child(4){margin:0 0 20px}.project .pic{height:210px}.about,.contact{display:block}.portrait{height:430px;margin-bottom:35px}.social{border-left:0;border-top:1px solid #e6d4da;padding:30px 0;margin-top:35px}.hero h1{font-size:62px}}
+</style>
+</head>
+<body>
+<nav><div class="logo">mhlphoto</div><div class="links">
+<a href="#home">Home</a><a href="#portfolio">作品集</a><a href="#about">关于我</a><a href="#contact">联系我</a>
+</div></nav>
+
+<section id="home" class="page hero active"><div class="hero-content"><h1>Meng</h1><p>建筑师 / 摄影师</p><small>ARCHITECTURE × PHOTOGRAPHY　·　SCROLL TO EXPLORE</small></div></section>
+
+<section id="portfolio" class="page">
+<div class="head"><div><h2>我的作品集</h2><div style="color:#8c858d;margin-top:8px">Photography Projects</div></div><p>用镜头记录空间、自然与日常。在理性的建筑秩序与感性的瞬间之间，寻找属于自己的视觉语言。</p></div>
+<div class="grid">
+<article class="project"><div class="pic p1"></div><div class="copy"><h3>城市建筑</h3><p>在钢筋水泥的森林中，寻找建筑与城市呼吸的节奏。</p></div></article>
+<article class="project"><div class="pic p2"></div><div class="copy"><h3>旷野遐想</h3><p>走进自然，感受尺度、方向与光线，让人在旷野中重新获得自由。</p></div></article>
+<article class="project"><div class="pic p3"></div><div class="copy"><h3>建筑光影</h3><p>光与影的交错，是空间最安静的语言，也是建筑最细腻的表情。</p></div></article>
+<article class="project"><div class="pic p4"></div><div class="copy"><h3>生活碎片</h3><p>平凡日常里的微小瞬间：一杯咖啡、一段街景、一束落日。</p></div></article>
+</div>
+</section>
+
+<section id="about" class="page"><div class="about"><div class="portrait"></div><div><h2>关于我</h2><div style="color:#8c858d">About Me</div>
+<p>我是一名建筑师，也是一名摄影师。对我而言，建筑与摄影有着相似的语言——都是对光、空间与时间的探索。</p>
+<p>建筑让我学会用理性的眼光观察世界，摄影则让我用感性的方式感受生活。无论是城市的天际线，还是旷野的晨昏，我都喜欢用镜头捕捉那些稍纵即逝的瞬间。</p>
+<p>我相信，好的照片不只是视觉的记录，更是情感的载体。它可以让人停下脚步，重新看见平凡中的美。未来，我希望继续用影像与建筑，记录更多关于世界与生活的故事。</p><div class="rule"></div><small>建筑　|　摄影　|　旅行　|　生活</small></div></div></section>
+
+<section id="contact" class="page"><div class="contact"><div><h2>联系我</h2><div style="color:#8c858d;margin-bottom:25px">Let's Create Something Beautiful</div><p style="color:#77717a;line-height:1.8">如果你有合作、交流或其他想法，欢迎随时与我联系。</p>
+<form class="form" onsubmit="event.preventDefault();alert('感谢留言！这是预览版，表单尚未连接后端。')"><input required placeholder="姓名 *"><input required type="email" placeholder="邮箱 *"><textarea required placeholder="留言 *"></textarea><button class="btn">发送 →</button></form></div>
+<aside class="social"><h3>社交媒体</h3><p>QQ<br><b>123456789</b></p><p>WeChat<br><b>mhlphoto</b></p><p>Behance<br><b>behance.net/mhlphoto</b></p></aside></div></section>
+<script>
+function route(){let id=location.hash.slice(1)||'home';document.querySelectorAll('.page').forEach(x=>x.classList.toggle('active',x.id===id));document.querySelectorAll('.links a').forEach(a=>a.classList.toggle('active',a.getAttribute('href')==='#'+id))}
+addEventListener('hashchange',route);route();
+</script>
+</body></html>
